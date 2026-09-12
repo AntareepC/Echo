@@ -1,0 +1,5 @@
+﻿node_modules/
+venv/
+data/vscode-src/
+__pycache__/
+.next/
