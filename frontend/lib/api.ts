@@ -1,6 +1,6 @@
 import type { GraphResponse, RiskItem, SimulateResponse } from "./types"
 
-export const DEFAULT_API_BASE = "http://127.0.0.1:8000"
+export const DEFAULT_API_BASE = "https://echo-nwwq.onrender.com"
 
 function join(base: string, path: string) {
   return `${base.replace(/\/$/, "")}${path}`

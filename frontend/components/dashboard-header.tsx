@@ -18,7 +18,7 @@ export function DashboardHeader({ apiBase, onApiBaseChange, connected }: Dashboa
         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-blue-500/30">
           <ShieldIcon />
         </div>
-        <span className="text-sm font-semibold tracking-tight text-slate-100">Supply Chain Shield</span>
+        <span className="text-sm font-semibold tracking-tight text-slate-100">Echo - Risk in Reserve</span>
       </div>
 
       <div className="flex items-center gap-3">

@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Echo',
+  title: 'Echo - Risk in Reserve',
   description:
     'Visualize a software dependency graph and simulate compromise propagation across the open source supply chain.',
   generator: 'v0.app',
