@@ -35,7 +35,7 @@ export function CompromiseImpact({ result, graph, loading, error }: CompromiseIm
 
       <div className="grid grid-cols-3 gap-3">
         <StatBox label="Affected Packages" value={result ? result.total_affected : "—"} accent="#ef4444" />
-        <StatBox label="Propagation Depth" value={result ? depth : "—"} accent="#60a5fa" unit="hops" />
+        <StatBox label="Propagation Depth" value={result ? depth : "—"} accent="#a78bfa" unit="hops" />
         <StatBox label="Vulnerabilities Found" value={result ? vulnsFound : "—"} accent="#f59e0b" />
       </div>
 

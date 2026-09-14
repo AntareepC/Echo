@@ -27,7 +27,7 @@ export function HeroStats({ graph, riskItems }: HeroStatsProps) {
         label: "Packages analyzed",
         value: formatNumber(nodeCount),
         hint: "Nodes in the dependency graph",
-        accent: "#60a5fa",
+        accent: "#a78bfa",
       },
       {
         label: "Dependencies mapped",

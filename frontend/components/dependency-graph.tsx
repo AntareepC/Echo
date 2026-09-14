@@ -122,7 +122,7 @@ export function DependencyGraph({ graph, riskItems, selectedNodeId, affected, on
           step={10}
           value={Math.min(maxNodes, totalNodes)}
           onChange={(e) => setMaxNodes(Number(e.target.value))}
-          className="mt-2 w-full accent-amber-500"
+          className="mt-2 w-full accent-violet-500"
           aria-label="Number of most-connected nodes to display"
         />
         <div className="mt-1.5 flex gap-1.5">

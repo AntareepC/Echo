@@ -15,7 +15,7 @@ export function PackageOverview({ graph }: PackageOverviewProps) {
     <section className="rounded-xl border border-white/10 bg-slate-900/50 p-4 backdrop-blur-sm">
       <h2 className="mb-3 text-sm font-semibold tracking-tight text-slate-100">Package Overview</h2>
       <div className="grid grid-cols-3 gap-2.5">
-        <Box label="Nodes" value={nodes} accent="#60a5fa" />
+        <Box label="Nodes" value={nodes} accent="#a78bfa" />
         <Box label="Edges" value={edges} accent="#a78bfa" />
         <Box label="Root CVEs" value={rootCves} accent="#ef4444" />
       </div>

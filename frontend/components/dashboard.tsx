@@ -56,21 +56,7 @@ export function Dashboard() {
   const nodes = graph?.nodes ?? []
 
   return (
-    <div
-      className="min-h-dvh text-slate-100"
-      style={{
-        backgroundColor: "#070b17",
-        backgroundImage: `
-          radial-gradient(circle at 15% 0%, rgba(37,99,235,0.14), transparent 45%),
-          radial-gradient(circle at 85% 10%, rgba(129,140,248,0.10), transparent 40%),
-          radial-gradient(circle at 50% 120%, rgba(239,68,68,0.06), transparent 50%),
-          linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)
-        `,
-        backgroundSize: "auto, auto, auto, 46px 46px, 46px 46px",
-        backgroundAttachment: "fixed",
-      }}
-    >
+    <div className="text-slate-100">
       <DashboardHeader apiBase={apiBase} onApiBaseChange={setApiBase} connected={connected} />
 
       <main className="mx-auto max-w-[1400px] px-4 py-6 sm:px-6">

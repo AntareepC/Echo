@@ -58,7 +58,7 @@ function computeRisk(result: SimulateResponse | null, graph: GraphResponse | und
 function bucket(score: number): { label: string; color: string } {
   if (score >= 66) return { label: "Critical", color: "#ef4444" }
   if (score >= 33) return { label: "Elevated", color: "#f59e0b" }
-  if (score >= 10) return { label: "Moderate", color: "#60a5fa" }
+  if (score >= 10) return { label: "Moderate", color: "#a78bfa" }
   return { label: "Low", color: "#22c55e" }
 }
 

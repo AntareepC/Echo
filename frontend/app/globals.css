@@ -154,6 +154,12 @@
 }
 
 @layer base {
+  input[type="checkbox"] {
+    accent-color: #8b5cf6;
+    background-color: rgb(30 27 75 / 0.8);
+    border-color: rgb(139 92 246 / 0.7);
+  }
+
   * {
     @apply border-border outline-ring/50;
   }

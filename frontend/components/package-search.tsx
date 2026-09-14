@@ -74,14 +74,14 @@ export function PackageSearch({ nodes, onAnalyze, disabled }: PackageSearchProps
             placeholder="Search a package"
             spellCheck={false}
             aria-label="Search a package"
-            className="w-full rounded-lg border border-white/10 bg-slate-950/60 py-2.5 pl-9 pr-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-blue-500/60 focus:outline-none focus:ring-1 focus:ring-blue-500/40 disabled:opacity-50"
+            className="w-full rounded-lg border border-white/10 bg-slate-950/60 py-2.5 pl-9 pr-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-violet-500/60 focus:outline-none focus:ring-1 focus:ring-violet-500/40 disabled:opacity-50"
           />
         </div>
         <button
           type="button"
           onClick={analyze}
           disabled={disabled || !query.trim()}
-          className="shrink-0 rounded-lg bg-blue-600 px-5 text-sm font-medium text-white transition-colors hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-40"
+          className="shrink-0 rounded-lg bg-violet-600 px-5 text-sm font-medium text-white transition-colors hover:bg-violet-500 disabled:cursor-not-allowed disabled:opacity-40"
         >
           Analyze
         </button>
@@ -103,7 +103,7 @@ export function PackageSearch({ nodes, onAnalyze, disabled }: PackageSearchProps
                 onClick={() => pick(m.id, m.name)}
                 onMouseEnter={() => setActiveIndex(i)}
                 className={`flex w-full items-center justify-between gap-3 rounded-md px-2.5 py-1.5 text-left transition-colors ${
-                  i === activeIndex ? "bg-blue-500/15" : "hover:bg-white/5"
+                  i === activeIndex ? "bg-violet-500/15" : "hover:bg-white/5"
                 }`}
               >
                 <span className="truncate text-sm text-slate-100">{m.name}</span>
