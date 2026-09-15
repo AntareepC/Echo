@@ -1,9 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Dashboard } from "@/components/dashboard"
+import { useRouter } from "next/navigation"
 
 export default function Page() {
+  const router = useRouter()
   const [spotlight, setSpotlight] = useState({ x: "50%", y: "20%", active: false })
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function Page() {
         backgroundAttachment: "fixed",
       }}
     >
-      <section className="mx-auto max-w-[1400px] px-4 pb-8 pt-16 sm:px-6 sm:pt-24">
+      <main className="mx-auto max-w-[1400px] px-4 pb-8 pt-16 sm:px-6 sm:pt-24">
         <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-3 duration-700">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-violet-300">Echo security intelligence</p>
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-6xl">
@@ -37,22 +38,27 @@ export default function Page() {
           <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-slate-400 sm:text-lg">
             Map open source dependencies, surface vulnerable package hubs, and simulate compromise propagation before it becomes an incident.
           </p>
-          <a
-            href="#analyzer"
+          <button
+            type="button"
+            onClick={() => router.push("/analyze")}
             className="mt-8 inline-flex items-center rounded-lg bg-violet-600 px-5 py-3 text-sm font-medium text-white shadow-lg shadow-violet-950/30 transition-colors hover:bg-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 focus:ring-offset-[#070b17]"
           >
             Start Analyzing
             <span className="ml-2" aria-hidden>→</span>
-          </a>
-        </div>
-      </section>
+          </button>
 
-      <div id="analyzer">
-        <Dashboard />
-      </div>
+          <section className="mt-16 max-w-3xl border-t border-white/10 pt-8" aria-labelledby="about-project">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">About this project</p>
+            <h2 id="about-project" className="mt-3 text-xl font-semibold text-slate-100">Understanding the ripple effect</h2>
+            <p className="mt-4 text-sm leading-7 text-slate-400">
+              Echo maps the open-source dependency graph behind real software projects, starting with VS Code&apos;s own 1,436-package dependency tree. It cross-references every package against known vulnerability databases (OSV.dev), then goes beyond simple CVE scoring: using graph analysis, Echo identifies which packages are structurally critical - sitting at the center of many dependency paths - regardless of whether they currently have a known vulnerability. When you simulate a compromise on any package, Echo traces the full blast radius through the dependency graph, showing exactly which downstream packages would be affected, how many steps away they are, and which fixes should be prioritized first. Built for the &apos;Open Source Supply Chain: The Ripple Effect&apos; hackathon track on Industry, Innovation and Infrastructure.
+            </p>
+          </section>
+        </div>
+      </main>
 
       <footer className="mx-auto max-w-[1400px] px-4 py-8 text-xs text-slate-500 sm:px-6">
-        Echo - Risk in Reserve · Open source supply chain visibility
+        Made by Team Chaos.js
       </footer>
     </div>
   )
