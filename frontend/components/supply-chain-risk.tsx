@@ -51,8 +51,7 @@ function computeRisk(result: SimulateResponse | null, graph: GraphResponse | und
     result.affected_packages.length > 0
       ? result.affected_packages.reduce((s, p) => s + p.impact_score, 0) / result.affected_packages.length
       : 0
-  const rawScore = (blast * 0.7 + avgImpact * 0.3) * 100
-  const score = clamp(Math.round(Math.max(rawScore * 2.5, rawScore + 25)))
+  const score = clamp(Math.round((blast * 0.7 + avgImpact * 0.3) * 100))
   return { score, ...bucket(score), caption: "Weighted blast radius of the current compromise scenario" }
 }
 
